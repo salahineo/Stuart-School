@@ -8,6 +8,7 @@
 
 - [Goal](#goal)
 - [Benefits](#benefits)
+- [Notes](#notes)
 - [Demo](#demo)
 - [Technologies](#technologies)
 - [Contact](#contact)
@@ -26,6 +27,14 @@ Here are some ideas to benefit from this project:
 - Review source code to see how other people code their projects.
 - Edit on this project after studying its code well, to know how to work in pair-programming with other people.
 - Upgrade this project, and add your own sections or pages.
+
+### Notes
+
+You will be asked for credentials if you navigate the 'student', 'teacher', or 'parent' pages. So use this name to redirect to the page
+
+- For Example:
+  - To go to student page, you should type the word 'student' in the username and password fields
+  - To go to teacher page, you should type the word 'teacher' in the username and password fields
 
 ### Demo
 
