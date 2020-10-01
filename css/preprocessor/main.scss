@@ -1,0 +1,18 @@
+// Helpers
+@import 'scss/helpers/variables';
+
+// Global Page
+@import 'scss/pages/global';
+
+// Layout
+@import 'scss/layout/grid';
+@import 'scss/layout/header';
+@import 'scss/layout/footer';
+
+// Componenets
+@import 'scss/components/buttons';
+
+// Pages
+@import 'scss/pages/login';
+@import 'scss/pages/home';
+@import 'scss/pages/dashboardPanel';

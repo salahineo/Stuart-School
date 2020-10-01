@@ -1,0 +1,104 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  padding: 20px 0 30px;
+  border-bottom: 1px solid #ccc;
+  @media #{$m-sm} {
+    text-align: left;
+  }
+  @media #{$sm} {
+    align-items: center;
+  }
+  @media #{$lg} {
+    flex-direction: row;
+    text-align: left;
+  }
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    .logo-content {
+      h1 {
+        text-transform: uppercase;
+        font-family: 'Times New Roman', Times, serif;
+        margin: 5px 0 10px;
+        font-size: 25px;
+        @media #{$sm} {
+          font-size: 2em;
+        }
+        &::first-letter {
+          color: $main-color;
+          font-size: 32px;
+          @media #{$sm} {
+            font-size: 40px;
+          }
+        }
+      }
+      p {
+        text-transform: capitalize;
+        color: $gray-color;
+        margin: 0;
+        font-size: 14px;
+        @media #{$sm} {
+          font-size: 1em;
+        }
+      }
+    }
+    .responsive-icon {
+      display: block;
+      font-size: 25px;
+      margin-top: 18px;
+      transition: 0.3s;
+      &:hover {
+        color: $main-color;
+      }
+      @media #{$sm} {
+        display: none;
+      }
+    }
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    border-radius: 3px;
+    background-color: $main-color;
+    transition: max-height 0.2s ease-out;
+    max-height: 0;
+    overflow: hidden;
+    @media #{$sm} {
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 30px;
+      padding: 0;
+      border-radius: 10px;
+      max-height: 38px;
+    }
+    @media #{$lg} {
+      margin-top: 1em;
+    }
+    li {
+      margin-left: 30px;
+      padding: 5px 0;
+      @media #{$sm} {
+        margin-left: 0;
+        margin-right: 30px;
+        &:first-of-type {
+          margin-left: 30px;
+        }
+      }
+      a {
+        display: block;
+        padding: 5px 0;
+        font-weight: bold;
+        color: #fff;
+        transition: 0.2s;
+        &:hover,
+        &.active {
+          color: #ffe94f;
+        }
+      }
+    }
+  }
+}

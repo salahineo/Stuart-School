@@ -1,0 +1,257 @@
+// Start Summary Dashboard
+.summary {
+  padding-bottom: 0;
+  .dashboard {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 150px;
+      border-radius: 8px;
+      color: #fff;
+      padding: 15px;
+      width: 270px;
+      margin-bottom: 30px;
+      &.lessons {
+        background-color: $dashboard-red;
+      }
+      &.teachers {
+        background-color: $dashboard-blue;
+      }
+      &.exams {
+        background-color: $dashboard-yellow;
+      }
+      &.duties {
+        background-color: $dashboard-green;
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        .number {
+          font-size: 80px;
+        }
+      }
+      .icon {
+        i {
+          font-size: 80px;
+        }
+      }
+    }
+  }
+}
+
+// End Summary Dashboard
+
+// Start Lessons & Quizes
+
+.lessons,
+.quizes,
+.grades {
+  padding-bottom: 0;
+  .lessons-content,
+  .quizes-content,
+  .grades-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    @media #{$xl} {
+      justify-content: space-between;
+    }
+    .lesson,
+    .quiz,
+    .grade {
+      width: 275px;
+      height: 320px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      position: relative;
+      color: #fff;
+      padding: 0 15px;
+      overflow: hidden;
+      &.math {
+        background-image: url('../images/lesson-math.jpg');
+      }
+      &.science {
+        background-image: url('../images/lesson-science.jpg');
+      }
+      &.art {
+        background-image: url('../images/lesson-art.jpg');
+      }
+      &.english {
+        background-image: url('../images/lesson-english.jpg');
+      }
+      &.geography {
+        background-image: url('../images/lesson-geography.jpg');
+      }
+      &.computer {
+        background-image: url('../images/lesson-computer.png');
+      }
+      &.chemistry {
+        background-image: url('../images/lesson-chemistry.jpg');
+      }
+      &.physics {
+        background-image: url('../images/lesson-physics.jpg');
+      }
+      &.grade-1 {
+        background-image: url('../images/grade-1.jpg');
+      }
+      &.grade-2 {
+        background-image: url('../images/grade-2.jpg');
+      }
+      &.grade-3 {
+        background-image: url('../images/grade-3.jpg');
+      }
+      &.grade-4 {
+        background-image: url('../images/grade-4.jpg');
+      }
+      .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: rgba(#000000, 0.75);
+      }
+      .new,
+      .chance {
+        position: absolute;
+        top: 20px;
+        left: 15px;
+        background-color: $dashboard-green;
+        padding: 5px 15px;
+        color: #fff;
+        z-index: 2;
+        border-radius: 2px;
+        font-size: 14px;
+      }
+      .info {
+        position: relative;
+        margin-top: 185px;
+        z-index: 2;
+        h4 {
+          margin: 0;
+        }
+        p {
+          margin: 15px 0 25px;
+          color: $gray-color;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+// End Lessons & Quizes
+
+// Start Duties
+
+.duties {
+  .duties-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    & > div {
+      margin-bottom: 40px;
+      min-width: 29 0px;
+    }
+    .duty {
+      margin-bottom: 25px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      [type='checkbox']:not(:checked),
+      [type='checkbox']:checked {
+        position: absolute;
+        left: -9999px;
+      }
+      [type='checkbox']:not(:checked) + label,
+      [type='checkbox']:checked + label {
+        position: relative;
+        padding-left: 35px;
+        cursor: pointer;
+        font-size: 20px;
+        transition: 0.3s;
+      }
+      [type='checkbox']:checked + label:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #f77275;
+        background: $main-color;
+        border-radius: 4px;
+      }
+      [type='checkbox']:checked + label:after {
+        content: '\2713\0020';
+        position: absolute;
+        top: 2px;
+        left: 5px;
+        font-size: 22px;
+        line-height: 0.8;
+        color: #fff;
+        transition: all 0.2s;
+        font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
+      }
+      [type='checkbox']:not(:checked) + label:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #cfcfcf;
+        background: #efefef;
+        border-radius: 4px;
+      }
+      [type='checkbox']:not(:checked) + label:after {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 5px;
+        font-size: 22px;
+        line-height: 0.8;
+        color: #fff;
+        transition: all 0.2s;
+        font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
+      }
+    }
+  }
+}
+
+// End Duties
+
+// Start Table
+
+.marks {
+  .marks-content {
+    white-space: nowrap;
+    overflow-x: auto;
+    table {
+      width: 90%;
+      margin: auto;
+      &,
+      td,
+      th {
+        border: 1px solid #999;
+        border-collapse: collapse;
+        padding: 10px 15px;
+      }
+      thead {
+        text-align: left;
+      }
+      tr:nth-of-type(even),
+      thead {
+        background-color: #eee;
+      }
+    }
+  }
+}
+
+// End Table

@@ -1,0 +1,21 @@
+.container {
+  margin: auto;
+  padding: 0 15px;
+  position: relative;
+
+  @media #{$sm} {
+    width: 546px;
+  }
+
+  @media #{$md} {
+    width: 750px;
+  }
+
+  @media #{$lg} {
+    width: 970px;
+  }
+
+  @media #{$xl} {
+    width: 1170px;
+  }
+}

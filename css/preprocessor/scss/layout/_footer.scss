@@ -1,0 +1,233 @@
+// Start Footer
+
+.footer {
+  background-color: $footer-color;
+  padding-top: 50px;
+  h3 {
+    color: $footer-heading-color;
+    margin-bottom: 35px;
+  }
+  .posts,
+  .details,
+  .contact {
+    margin: auto;
+    margin-bottom: 80px;
+    @media #{$m-lg} {
+      max-width: 470px;
+    }
+  }
+  .details {
+    @media #{$m-lg} {
+      p {
+        line-height: 1.6;
+      }
+    }
+  }
+  @media #{$lg} and #{$m-xl} {
+    .posts,
+    .details {
+      float: left;
+      width: (100% / 2);
+      padding: 0 10px;
+      margin-bottom: 50px;
+    }
+    .contact {
+      margin: 0 0 30px;
+      width: 50%;
+      transform: translateX(50%);
+    }
+  }
+  @media #{$xl} {
+    .posts,
+    .details,
+    .contact {
+      float: left;
+      width: (100% / 3);
+      padding: 0 10px;
+      margin-bottom: 0;
+    }
+  }
+  .posts {
+    .post {
+      display: flex;
+      cursor: pointer;
+      margin-bottom: 20px;
+      .post-image {
+        position: relative;
+        height: 110px;
+        margin-right: 10px;
+        padding: 2px;
+        overflow: hidden;
+        .overlay {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          top: 50%;
+          left: 50%;
+          background-color: rgba($main-color, 0.6);
+          transition: 0.3s;
+          overflow: hidden;
+          i {
+            font-size: 25px;
+            position: relative;
+            top: calc(50% - 10px);
+            left: calc(50% - 10px);
+            color: #fff;
+          }
+        }
+        width: 170px;
+        img {
+          max-width: 100%;
+        }
+      }
+      .post-info {
+        h4 {
+          color: $main-color;
+          margin: 5px 0 10px 0;
+        }
+        p {
+          margin: 0;
+          line-height: 1.6;
+          font-size: 15px;
+          letter-spacing: 0.3px;
+          color: $paragraph-color;
+        }
+      }
+      &:hover {
+        .post-image {
+          .overlay {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+  .details {
+    .details-section {
+      margin-bottom: 35px;
+      color: $paragraph-color;
+      &:first-of-type {
+        p {
+          line-height: 1.4;
+        }
+      }
+      p {
+        font-size: 15px;
+        margin: 0 0 12px;
+        .title {
+          font-weight: 600;
+          font-size: 20px;
+          margin-right: 8px;
+        }
+        .email {
+          color: $main-color;
+        }
+      }
+      h4 {
+        margin: 0 0 10px;
+      }
+    }
+  }
+  .contact {
+    input:not([type='submit']),
+    textarea {
+      display: block;
+      border: 0;
+      margin-bottom: 15px;
+      width: 100%;
+      padding: 10px 15px;
+      border-radius: 5px;
+      overflow: hidden;
+      &::placeholder {
+        transition: 0.3s;
+      }
+      &:focus {
+        outline: 0;
+        border: 1px solid rgba($main-color, 0.6);
+        box-shadow: 0px 0px 4px $main-color;
+        &::placeholder {
+          color: #fff;
+        }
+      }
+    }
+    textarea {
+      resize: none;
+    }
+    .errorMessage,
+    .successMessage {
+      padding: 10px 15px;
+      border-radius: 5px;
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      overflow: hidden;
+      display: none;
+      transition: 0.3s;
+      align-items: center;
+      p {
+        margin: 0;
+        i {
+          margin-right: 10px;
+          font-size: 18px;
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+    .errorMessage {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid rgba(226, 73, 76, 0.6);
+      box-shadow: 0px 0px 4px #e2494c;
+    }
+    .successMessage {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      box-shadow: 0px 0px 4px #79e249;
+    }
+    .closeMessage {
+      margin-left: 10px;
+      padding: 0 5px 0 10px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+  }
+
+  .credits {
+    padding: 20px 0;
+    color: $paragraph-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    @media #{$sm} {
+      flex-direction: row;
+    }
+    .copyright {
+      margin-bottom: 20px;
+      span {
+        color: $main-color;
+      }
+      @media #{$sm} {
+        margin-bottom: 0;
+      }
+    }
+    .links {
+      a {
+        color: $paragraph-color;
+        padding: 0 5px;
+        font-size: 18px;
+        transition: 0.3s;
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
+// End Footer
