@@ -30,11 +30,13 @@ Here are some ideas to benefit from this project:
 
 ### Notes
 
-You will be asked for credentials if you navigate the 'student', 'teacher', or 'parent' pages. So use this name to redirect to the page
+You will be asked for credentials if you navigate the `student`, `teacher`, or `parent` pages. So use this name to redirect to the page
 
 - For Example:
-  - To go to student page, you should type the word 'student' in the username and password fields
-  - To go to teacher page, you should type the word 'teacher' in the username and password fields
+  - To go to student page, you should type the word `student` in the username and password fields
+  - To go to teacher page, you should type the word `teacher` in the username and password fields
+
+> You can access these pages directly from the `pages` folder
 
 ### Demo
 
